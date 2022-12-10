@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BRA</string>
     <string name="enterName">Enter Name</string>
+    <string name="update">Update route</string>
+    <string name="cancel">Cancel</string>
     <string name="enterEmail">Enter Email</string>
     <string name="enterMessage">Enter Message</string>
     <string name="submit_button">Send</string>

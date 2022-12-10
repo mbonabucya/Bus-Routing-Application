@@ -1,7 +1,10 @@
 package com.example.finalprojectgroup
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -16,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.finalprojectgroup.screens.RoutesScreen
 import com.example.finalprojectgroup.ui.theme.DrawerBody
 import com.example.finalprojectgroup.ui.theme.DrawerHeader
 import kotlinx.coroutines.launch
@@ -46,10 +50,12 @@ fun HomeScreen(navController: NavController){
 //                    Text(text = bottonState, fontSize = 25.sp, fontWeight = FontWeight.Bold)
                     InfoScreen()
                 }else if(bottonState.equals("Share")){
-                    Text(text = "Share map screen", fontSize = 25.sp, fontWeight = FontWeight.Bold)
+                    RoutesScreen(navController)
+//                    Text(text = "Share map screen", fontSize = 25.sp, fontWeight = FontWeight.Bold)
                 }else if(bottonState.equals("Follow")){
                     Text(text = "Follow map screen", fontSize = 25.sp, fontWeight = FontWeight.Bold)
 //                    InfoScreen()
+
                 }
 //                else if(bottonState.equals("About")){
 ////                    Text(text = "Account screen", fontSize = 25.sp, fontWeight = FontWeight.Bold)
@@ -110,7 +116,7 @@ fun HomeScreen(navController: NavController){
                         ),
                         MenuItem(
                             id = "share",
-                            title = "Share Location",
+                            title = "Share",
                             contentDescription = "Go to shuttles screen",
                             icon = Icons.Default.LocationOn
                         ),
